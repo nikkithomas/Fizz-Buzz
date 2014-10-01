@@ -1,32 +1,47 @@
 $(document).ready(function(){
-	$("#submit").click(function(){
+	$("#submit").click(function(e){
+		var addNum=$("#number").val();
+		e.preventDefault();
 
-		for(var i=1; i<=100; i++){
+
+
+	
+		for(var i=1; i<=addNum; i++){
+
+				var numval=$("#number").val("");
 				if(i%3===0 && i%5===0){
-					$(".middle").append("FizzBuzz<br>");
+					numval='FizzBuzz';
 				}
 				else if(i%3===0){
-					$(".middle").append("Fizz<br>");
+					numval ='Fizz';
 				}
-				else if(i%5===0){
-					$(".middle").append("Buzz<br>");
+				 else if(i%5===0){
+					numval ='Buzz';
 				}
-				else{
-					$(".middle").append(i+"<br>");
+				else {
+					numval=i;
 				}
+
+				
+				
+
+				$(".middle").append('<li class="numStyle">'+numval+'</li>');
 
 			}
 
-		
-	});	
+
+
+
+});
+
+	
+
 
 	$("#clear").click(function(){
 		$(".middle").empty();
 
 	});
 
-	$
 
 });
-
 
