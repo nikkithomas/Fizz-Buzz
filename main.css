@@ -53,3 +53,7 @@
 	font-weight: bold;
 
 }
+
+.numStyle{
+	list-style-type: none;
+}
